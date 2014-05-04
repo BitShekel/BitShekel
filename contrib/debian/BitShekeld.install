@@ -1,0 +1,2 @@
+debian/bin/BitShekeld usr/bin
+src/BitShekeld usr/lib/BitShekel

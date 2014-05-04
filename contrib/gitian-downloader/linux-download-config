@@ -1,0 +1,26 @@
+--- 
+name: BitShekel
+urls:
+- http://BitShekel.us
+rss:
+- url:
+  xpath: //item/link/text()
+  pattern: BitShekel-\d+.\d+.\d+-linux-gitian.zip
+signers:
+  0A82509767C7D4A5D14DA2301AE1D35043E08E54:
+    weight: 40
+    name: BlueMatt
+    key: bluematt
+  BF6273FAEF7CC0BA1F562E50989F6B3048A116B5:
+    weight: 40
+    name: Devrandom
+    key: devrandom
+  D762373D24904A3E42F33B08B9A408E71DAAC974:
+    weight: 40
+    name: Sipa
+    key: sipa
+  77E72E69DA7EE0A148C06B21B34821D4944DE5F7:
+    weight: 40
+    name: tcatm
+    key: tcatm
+minimum_weight: 120

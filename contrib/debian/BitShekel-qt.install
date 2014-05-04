@@ -1,0 +1,6 @@
+debian/bin/BitShekel-qt usr/bin
+BitShekel-qt usr/lib/BitShekel
+share/pixmaps/BitShekel32.xpm usr/share/pixmaps
+share/pixmaps/BitShekel80.xpm usr/share/pixmaps
+debian/BitShekel-qt.desktop usr/share/applications
+debian/BitShekel-qt.protocol usr/share/kde4/services/
