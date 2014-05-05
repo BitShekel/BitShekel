@@ -281,7 +281,7 @@ public:
         label_6->setText(QString());
         label_4->setText(QApplication::translate("OverviewPage", "<b>Recent \342\216\214</b>", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
-        labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Isracoin network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
+        labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "UPDATEFIELD:The displayed information may be out of date. Your wallet automatically synchronizes with the BitShekel network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
     } // retranslateUi
 
