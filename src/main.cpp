@@ -36,7 +36,7 @@ unsigned int nTransactionsUpdated = 0;
 map<COutPoint, CInPoint> mapNextTx;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x9e4a7608f337607d25e3957537e4bc387a258ed09cf1b0fd877498ccfe8e1d4c");
+uint256 hashGenesisBlock("0xc97733e8d690a2333849558bd95c8b64031ba9ffff06af4c147eb14aaf37b2e5");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // BitShekel: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -1876,7 +1876,7 @@ bool LoadBlockIndex(bool fAllowNew)
 {
     if (fTestNet)
     {
-        hashGenesisBlock = uint256("0x93bf0eb6048360525c066bd1a19969caa68ac0e9a7c0f31e34d142d19a439f52");
+        hashGenesisBlock = uint256("0xc97733e8d690a2333849558bd95c8b64031ba9ffff06af4c147eb14aaf37b2e5");
         // bnProofOfWorkLimit = CBigNum(~uint256(0) >> 28); // BitShekel: starting difficulty is the same for testnet
         // BitShekel: increase each by adding 2 to BitShekel's value.
         pchMessageStart[0] = 0xfc;
@@ -1901,15 +1901,9 @@ bool LoadBlockIndex(bool fAllowNew)
         if (!fAllowNew)
             return false;
 
-        // Genesis Block:
-        // CBlock(hash=9e4a7608f337607d25e3, PoW=00000a455856e77f2738, ver=1, hashPrevBlock=00000000000000000000, hashMerkleRoot=2d45d20d12, nTime=1386149435, nBits=1e0ffff0, nNonce=1267185, vtx=1)
-        //   CTransaction(hash=2d45d20d12, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-        //     CTxIn(COutPoint(0000000000, -1), coinbase  04ffff001d01042b486f77204c6f6e67204d7573742049737261656c2027476976652050656163652061204368616e6365273f)
-        //     CTxOut(error)
-        //   vMerkleTree: 2d45d20d12
 
         // Genesis block
-        const char* pszTimestamp = "How Long Must Israel 'Give Peace a Chance'?";
+        const char* pszTimestamp = "Saudi Arabia Displays Ballistic Missiles";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -1921,22 +1915,22 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1386149435;
+        block.nTime    = 1399257068;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 1267185;
+        block.nNonce   = 49556;
 
         if (fTestNet)
         {
-            block.nTime    = 1386143445;
+            block.nTime    = 1399257068;
             block.nBits    = 0x1e0ffff0;
-            block.nNonce   = 375130;
+            block.nNonce   = 49556;
         }
 
         //// debug print
         printf("%s\n", block.GetHash().ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x2d45d20d12a5a019cc067c73647edacb3621fdd4dd159cbc818ddfb2c4e0c37a"));
+        assert(block.hashMerkleRoot == uint256("0x3320735511637705eaebf4d4fe2b96237a179a050f3192706737f4c89b780012"));
 
         // If genesis block hash does not match, then generate new genesis hash.
         if (true && block.GetHash() != hashGenesisBlock)
